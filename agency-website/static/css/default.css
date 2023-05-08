@@ -1,0 +1,272 @@
+/* Olá pessoa! Você é muito especial! (ɔ˘ ³(°̃ ₒ°̃c) */
+
+
+/* || Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* || Common */
+
+*,
+html,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font: normal 16px/20px 'Raleway', 'Segoe UI', 'Ubuntu', Arial, sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    line-height: 1em;
+}
+
+h2 {
+    line-height: 1.5em;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/* Limpa o contexto flutuante do elemento pai em ambos os lados. */
+.clear {
+    clear: both;
+}
+
+/* || Background Colors */
+
+.bg-blue {
+    background-color: #43CACA !important;
+}
+
+.bg-green {
+    background-color: #5ABB49 !important;
+}
+
+.bg-yellow {
+    background-color: #F7B40E !important;
+}
+
+.bg-red {
+    background-color: #F34C49 !important;
+}
+
+.bg-purple {
+    background-color: #B2398A !important;
+}
+
+/* || Site Header */
+
+.header-nav {
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.header-nav a {
+    text-decoration: none !important;
+}
+
+.header-brand a {
+    display: flex;
+    width: 270px;
+    height: 90px;
+    background-color: #fff;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.header-nav-list a {
+    display: flex;
+    width: 170px;
+    height: 90px;
+    color: #fff;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: filter .2s ease-in-out;
+}
+.header-nav-list a:hover {
+    filter: brightness(90%);
+}
+
+.header-banner {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background: url(../../assets/images/banner.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title {
+    color: #fff;
+    font-size: 130px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .34);
+}
+
+.banner-title span {
+    /* Força a quebra de linha */
+    display: block;
+    font-size: 80px;
+}
+
+/* || Site Main Content */
+
+.agency-main-content {
+    margin-top: 50px;
+}
+
+.main-row {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.main-row section {
+    display: flex;
+    margin: 0 20px;
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-row.flexible section {
+    width: 350px;
+}
+
+.main-row figure {
+    margin: 0 20px;
+}
+
+.main-row figure img {
+    width: 550px;
+    height: auto;
+}
+
+.main-row section:first-child,
+.main-row figure:first-child {
+    margin-left: 0;
+}
+
+.main-row section:last-child,
+.main-row figure:last-child {
+    margin-right: 0;
+}
+
+.main-row h2 {
+    margin-bottom: 30px;
+    color: #464646;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.main-row p {
+    color: #464646;
+    font-size: 16px;
+    word-break: break-all;
+}
+
+.main-row i {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 66px;
+}
+
+/* Para rows que tenham um background especificado */
+
+.main-row section[class*="bg-"] h2,
+.main-row section[class*="bg-"] p {
+    color: #fff;
+}
+
+.main-row section[class*="bg-"] h2 {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .34);
+}
+
+.main-row section[class*="bg-"] i {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .34);
+}
+
+/* || Site Footer */
+
+.agency-footer {
+    color: #fff;
+    background-color: #242424;
+}
+
+.footer-link-menu {
+    display: flex;
+    height: 120px;
+    background-color: #2f2f2f;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link-menu ul {
+    list-style: none;
+}
+
+.footer-link-menu li {
+    display: inline-block;
+}
+
+.footer-link-menu li a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-copy {
+    display: flex;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* "Imagination is more important than knowledge.
+    Knowledge is limited.
+    Imagination encircles the world."
+
+        ~ Albert Einstein
+*/

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+@import url('./reset.css');
+
+:root {
+    /** Palette: https://colorhunt.co/palette/220248 **/
+    --color-white: #e8e8e8;
+    --color-red: #f05454;
+    --color-gray: #30475e;
+    --color-black: #222831;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+/****************************************************************************/
+/** Window                                                                  */
+/****************************************************************************/
+
+.window-container {
+    width: 60vw;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 15px 15px 0 0 var(--color-red);
+}
+
+.window-title-bar {
+    background-color: rgb(20, 20, 20);
+    padding: 5px 15px;
+    user-select: none;
+}
+
+.title-bar-button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.window-body {
+    padding: 10px;
+}
+
+/****************************************************************************/
+/** Terminal                                                                */
+/****************************************************************************/
+
+.terminal {
+    color: white;
+    user-select: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.terminal-line {
+    margin: 0 5px;
+}
+
+.terminal-prompt-link {
+    color: white;
+    margin: 0 5px;
+}
+
+/* Terminal text styles */
+.terminal-palette-black  { color: #2E3436 }
+.terminal-palette-grey  { color: #555753 }
+.terminal-palette-red    { color: #CC0000 }
+.terminal-palette-green  { color: #4E9A06 }
+.terminal-palette-yellow { color: #C4A000 }
+.terminal-palette-blue   { color: #3465A4 }
+.terminal-palette-purple { color: #75507B }
+.terminal-palette-cyan   { color: #06989A }
+.terminal-palette-white  { color: #D3D7CF }
+
+.terminal-text-bold      { font-weight: bold; }
+
+/****************************************************************************/
+/** 404                                                                     */
+/****************************************************************************/
+
+.error-404-title {
+    font-family: Raley, sans-serif;
+    font-weight: bold;
+    font-size: 150px;
+    text-shadow: 7px 7px 0 var(--color-red);
+}
+
+/****************************************************************************/
+/** Mobile                                                                  */
+/****************************************************************************/
+
+.on-mobile {
+    display: none;
+}
+
+.mobile-window {
+    user-select: none;
+}
+
+.mobile-link-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-link-list li {
+    margin: 40px 0;
+}
+
+.mobile-link-list li a {
+    text-decoration: none;
+    background-color: var(--color-black);
+    padding: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: var(--color-red);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .on-desktop {
+        display: none;
+    }
+
+    .on-mobile {
+        display: block;
+    }
+
+    .error-404-title {
+        color: var(--color-black);
+        text-shadow: 7px 7px 0 var(--color-white);
+    }
+}

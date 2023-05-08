@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font: 16px "Mouse Memoirs";
+    background: #ad6932;
+    color: #523118;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 1em 0 2em;
+    background-image: repeating-linear-gradient(45deg, #5f391c, #5f391c 100px, #865127 100px, #865127 200px);
+    color: #f0dccd;
+    box-shadow: 0 0 0 0.5em rgb(255 255 255 / 25%) inset;
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 0;
+    font-style: italic;
+}
+
+.sweets-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sweet {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 200px;
+    cursor: pointer;
+}
+.sweet:hover {
+    transform: scale(105%);
+}
+
+.sweet:first-child,
+.sweet:nth-child(4),
+.sweet:nth-child(7),
+.sweet:last-child {
+    background-color: #E8B0AF;
+}
+
+.sweet:nth-child(2),
+.sweet:nth-child(5),
+.sweet:nth-child(8) {
+    background-color: #FDDAC4;
+}
+
+.sweet:nth-child(3),
+.sweet:nth-child(6),
+.sweet:nth-child(9) {
+    background-color: #F1D5A5;
+}
+
+.sweet-image-wrapper {
+    display: grid;
+    place-items: center;
+    flex: 1;
+}
+
+.sweet-image-wrapper img {
+    width: 7em;
+}
+
+.sweet-name-wrapper {
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    font-size: 16px;
+}
+
+footer {
+    width: 100vw;
+}
+
+.send-btn {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #a0ce5a;
+    color: #334715;
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+}
+
+.send-btn:hover {
+    background-color: #7fb034;
+}
+
+.shopping-list-wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F1D5A5;
+}
+
+.shopping-list {
+    margin: 0;
+    padding: 0;
+}
+
+.shopping-list-wrapper h3 {
+    margin: 0;
+}
+
+.shopping-list-sweet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping-list-sweet p {
+    margin: 0;
+}
+
+.del:after {
+    position: relative;
+    content: "x";
+    color: red;
+    font-size: 24px;
+    margin-left: .2em;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.del:hover:after {
+    color: blue;
+}
+

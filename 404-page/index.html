@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh não...</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="window-container on-desktop">
+        <div class="window-title-bar">
+            <div class="title-bar-button"></div>
+            <div class="title-bar-button"></div>
+            <div class="title-bar-button"></div>
+        </div>
+
+        <div class="window-body">
+            <div class="terminal">
+                <p class="terminal-line">
+                    <span class="terminal-palette-green terminal-text-bold">user&commat;website</span>&colon;<span class="terminal-palette-blue">&Tilde;</span>&dollar;
+                    cat ./404.txt
+                </p>
+                <div class="terminal-result">
+                    <p class="error-404-title">404</p>
+                    <p class="terminal-palette-grey">Esta página não pode ser encontrada &colon;&lpar;</p>
+                    <br>
+                </div>
+                <p class="terminal-line">
+                    <span class="terminal-palette-green terminal-text-bold">user&commat;website</span>&colon;<span class="terminal-palette-blue">&Tilde;</span>&dollar;
+                    <a href="#" class="terminal-prompt-link">Página Inicial</a>
+                    <a href="#" class="terminal-prompt-link">Entre em Contato</a>
+                    <a href="#" class="terminal-prompt-link">Por que isso?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-window on-mobile">
+        <p class="error-404-title">404</p>
+        <p class="terminal-palette-white">Esta página não pode ser encontrada &colon;&lpar;</p>
+
+        <ul class="mobile-link-list">
+            <li><a href="#" class="terminal-prompt-link">Página Inicial</a></li>
+            <li><a href="#" class="terminal-prompt-link">Entre em Contato</a></li>
+            <li><a href="#" class="terminal-prompt-link">Por que isso?</a></li>
+        </ul>
+    </div>
+</body>
+</html>

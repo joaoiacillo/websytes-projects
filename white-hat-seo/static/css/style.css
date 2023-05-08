@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+/* || Reset */
+
+* {
+   margin: 0;
+   padding: 0
+   border: 0; 
+}
+
+*,
+*::before,
+*::after,
+html {
+    box-sizing: border-box;
+}
+
+/* || Common */
+
+:root {
+    --c-pink-accent: #E649B1;
+    --c-pink-link: #F24EBB;
+}
+
+body {
+    font: normal 11pt/20px 'Poppins', sans-serif;
+}
+
+a {
+    color: var(--c-pink-link);
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col {
+    display: flex;
+    margin: 5px 10px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-img {
+    min-width: 100%;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    margin-left: 8px;
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 1px 4px rgba(0 0 0 / 30%);
+}
+
+/* || Headings */
+
+h1, h2, h3 {
+    color: var(--c-pink-accent);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-shadow: 1px 1px 4px rgba(0 0 0 / 30%);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1em;
+    text-shadow: 1px 1px 4px rgba(0 0 0 / 30%);
+}
+
+h3 {
+    position: relative;
+    margin: 15px 30px 15px 0;
+    width: fit-content;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+h3::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    background-color: var(--c-pink-accent);
+    animation-name: navitem-strip-appear;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(100, 100, 100);
+}
+
+/* || Header */
+
+.an-header {
+    height: 100vh;
+    background: url("../../assets/imgs/hero.jpg") no-repeat center right;
+    background-size: cover;
+}
+
+.an-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.an-navbar a {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.an-navbar h1 a {
+    font-size: 26px;
+    color: var(--c-pink-accent);
+}
+
+.an-navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.an-navbar li {
+    /* Posiciona todos os elementos crianças, com posição absouta,
+       relativamente ao X e ao Y desse elemento */
+    position: relative;
+    margin: 0 1em;
+    transition: color .2s ease-in-out;
+}
+
+.an-navbar li:hover a {
+    color: #3b3b3b;
+}
+
+.an-navbar li:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    background-color: #3b3b3b;
+    animation-name: navitem-strip-appear;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navitem-strip-appear {
+    from { height: 0; }
+    to { height: 3px; }
+}
+
+.an-navbar li a {
+    padding: 5px 10px;
+}
+
+.an-navbar li.active a {
+    color: var(--c-pink-link);
+    text-shadow: 1px 1px 4px rgba(0 0 0 / 10%);
+}
+
+/* Fita adicionada ao item da navbar que está ativo. */
+.an-navbar li.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--c-pink-accent);
+}
+
+.an-header-content {
+    margin-top: 5em;
+}
+
+.an-header-content h2 {
+    color: white;
+    margin-left: 20px;
+}
+
+.an-header-content h2 .highlighted {
+    color: var(--c-pink-accent);
+}
+
+.an-header-content p {
+    max-width: 500px;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.an-header-content p.jobs {
+    width: fit-content;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #3b3b3b;
+    background-color: white;
+    text-shadow: 1px 1px 4px rgba(0 0 0 / 30%);
+}
+
+.an-header-content .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 500px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--c-pink-link);
+    background-color: white;
+}
+
+.an-header-content .cta-btn i {
+    margin-left: 5px;
+}
+
+/* || Main */
+
+.an-section {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.an-content-section {
+    padding-bottom: 30px;
+    border-bottom: dashed 3px var(--c-pink-accent);
+}
+
+.an-content-section h3 a {
+    display: none;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.an-content-section h3:hover a {
+    display: inline-block;
+}
+
+.an-section h2 {
+    margin-bottom: 30px;
+}
+
+.an-section p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.my-work {
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+.my-work:hover {
+    transform: scale(1.1);
+}
+
+.work-img {
+    border-radius: 10px;
+}
+
+.blog-post {
+    margin-top: 15px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 -4px 4px rgba(230, 73, 177, .7),
+                0 8px 4px rgba(230, 73, 177, .3);
+}
+
+.blog-post h4 {
+    margin: 15px 0;
+}
+
+/* || Footer */
+
+.an-footer {
+    margin-top: 50px;
+    padding: 30px 15px;
+    color: white;
+    background-color: #3f3f3f;
+}
+
+.an-footer h4 {
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.an-footer p {
+    text-shadow: 1px 1px 4px black;
+}
+
+/* || Contact Me */
+
+.an-contact-form {
+
+}
+
+.an-contact-form .contact-form-input {
+    margin-bottom: 15px;
+}
+
+.an-contact-form input,
+.an-contact-form textarea {
+    display: block;
+    width: 50vw;
+    padding: 5px 10px;
+    font-size: 16px;
+    outline: none;
+    border: 3px solid var(--c-pink-accent);
+    border-radius: 0;
+    resize: vertical;
+}
+
+.an-contact-form .contact-form-input label {
+    display: block;
+    color: var(--c-pink-accent);
+    font-weight: 700;
+}
+
+.an-contact-form .contact-submit {
+    width: 200px;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 0;
+    color: white;
+    background-color: var(--c-pink-accent);
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+.an-contact-form .contact-submit:hover {
+    transform: scale(1.1);
+}
